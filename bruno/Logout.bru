@@ -1,0 +1,19 @@
+meta {
+  name: Logout
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/auth/logout
+  body: none
+  auth: bearer
+}
+
+headers {
+  cookie: {{authCookie}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

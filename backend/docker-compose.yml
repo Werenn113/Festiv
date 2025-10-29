@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=werenn
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=festivdb
+    volumes:
+      - ../../postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'

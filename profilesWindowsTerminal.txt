@@ -1,0 +1,42 @@
+Ajouter ces profiles dans le config.json du Windows Terminal : Paramètre > Ouvrir le fichier JSON (tout en bas à gauche)
+Lancer Ubuntu-festivDev puis 4 panels vont s'ouvrir :
+    - en haut à gauche : server backend
+    - en bas à gauche : prisma studio
+    - en haut à droite : serveur frontend
+    - en bas à droite : ubuntu dans le dossier Festiv (pour faire les commandes git par exemple)
+
+{
+    "commandline": "wt -w 0 new-tab -p \"Ubuntu-backendServer\" ; split-pane -V -p \"Ubuntu-frontendServer\" ; move-focus left ; split-pane -H -p \"Ubuntu-prismaStudio\"; move-focus up ; move-focus right ; split-pane -H -p \"Ubuntu-festivDir\"",
+    "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+    "hidden": false,
+    "name": "Ubuntu-festivDev",
+    "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+},
+{
+    "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu bash -c \"npm run start:dev\"",
+    "guid": "{18045133-a6c6-4a3f-a84d-b46f23400e4f}",
+    "hidden": true,
+    "name": "Ubuntu-backendServer",
+    "startingDirectory": "/home/werenn/Festiv/backend"
+},
+{
+    "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu bash -c \"npx prisma studio\"",
+    "guid": "{f5899f88-3f05-429e-81cf-67586c2ea5ce}",
+    "hidden": true,
+    "name": "Ubuntu-prismaStudio",
+    "startingDirectory": "/home/werenn/Festiv/backend"
+},
+{
+    "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu bash -c \"npm run dev\"",
+    "guid": "{7e1738d0-7748-4aa6-9bdb-969b4c9d9885}",
+    "hidden": true,
+    "name": "Ubuntu-frontendServer",
+    "startingDirectory": "/home/werenn/Festiv/frontend"
+},
+{
+    "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu",
+    "guid": "{0a334d62-3ac5-4960-a4f0-c50fc40ce0cf}",
+    "hidden": true,
+    "name": "Ubuntu-festivDir",
+    "startingDirectory": "/home/werenn/Festiv"
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Status
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/auth/status
+  body: none
+  auth: bearer
+}
+
+headers {
+  cookie: {{authCookie}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+script:post-response {
+  if(res.body.access_token){
+    bru.setVar("access_token", res.body.access_token)
+  }
+}

@@ -1,0 +1,8 @@
+.toast-with-style {
+    padding: 12px;
+    min-width: 500px;
+}
+
+.toast-with-style > div {
+    padding: 16px;
+}
